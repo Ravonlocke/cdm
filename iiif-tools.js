@@ -4,11 +4,11 @@
     let createCollectionManifest = function() {
         return {
             '@context' : 'http://iiif.io/api/presentation/2/context.json',
-            '@id' : 'https://cdm15717.contentdm.oclc.org/change/this/to/the/path/this/gets/saved.json',
-            '@type' : 'sc:Collection',
-            'label' : 'Timeline Demo',
-            'description' : 'Collection from Timeline Demo',
-            'attribution' : 'This collection of images may be printed or downloaded by individuals, schools or libraries for study, research or classroom teaching without permission. For other uses contact  visualcollections@indianahistory.org. Use must be accompanied with the attribution, "Indiana Historical Society".',
+            '@id' : 'https://cdm17085.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p15717coll1/saved.json',
+            '@type' : 'sc:Timeline Test',
+            'label' : 'Timeline Test',
+            'description' : 'Collection from Timeline Test',
+            'attribution' : 'This collection is under copyright.',
             'members' : []
         };
     }
@@ -16,7 +16,7 @@
     // Create a IIIF Collection Manifest member from a CONTENTdm dmQuery API item record
     let createMember = function(record) {
         return {
-            '@id' : 'https://cdm15717.contentdm.oclc.org/digital/iiif-info' + record.collection + '/' + record.pointer + '/manifest.json',
+            '@id' : 'https://cdm17085.contentdm.oclc.org/digital/iiif-info' + record.collection + '/' + record.pointer + '/manifest.json',
             '@type' : 'sc:Manifest',
             'label' : record.title
         };
@@ -39,7 +39,7 @@
             'media' : {
                 'url' : updateIIIFImageUrl(itemManifest.sequences[0].canvases[0].images[0].resource['@id'], 'size', '725,'),
                 'credit' : itemManifest.attribution['@value'],
-                'link' : 'https://cdm15717.contentdm.oclc.org/digital/collection/' + getUrlPart(itemManifest['@id'], 2) + '/id/' + getUrlPart(itemManifest['@id'], 3)
+                'link' : 'https://cdm17085.contentdm.oclc.org/digital/collection/p17085coll1' + getUrlPart(itemManifest['@id'], 2) + '/id/' + getUrlPart(itemManifest['@id'], 3)
             },
             'start_date' : {
                 'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear()
@@ -72,15 +72,3 @@
         let urlParts = url.pathname.split('/');
         return urlParts[pathIndex];
     }
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
