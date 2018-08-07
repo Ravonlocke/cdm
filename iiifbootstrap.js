@@ -32,7 +32,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
                     cssFileRef.href = "https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css";
                     document.getElementsByTagName("head")[0].appendChild(cssFileRef)
                     
-                    axios.get('https://cdm17085.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p17085coll1/0/title!demo!rights/demo/100/1/0/0/0/0/json')
+                    axios.get('https://cdm17085.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p17085coll1/0/title/title/100/1/0/0/0/0/json')
                     .then(function(response) {
                         let collectionManifest = createCollectionManifest();
                         response.data.records.forEach(function(record) {
