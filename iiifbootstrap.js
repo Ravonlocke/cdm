@@ -25,14 +25,14 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
        ScriptLoader('https://cdn.jsdelivr.net/npm/url-polyfill@1.0.13/url-polyfill.min.js', function() {
           ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
             ScriptLoader('https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js', function(){
-                ScriptLoader('https://cdm17085.contentdm.oclc.org/ui/custom/default/collection/default/resources/custompages/cdmugtest/iiif-tools.js', function(){
+                ScriptLoader('https://cdm17085.contentdm.oclc.org/customizations/global/pages/iiif-tools.js', function(){
                     let cssFileRef = document.createElement("link");
                     cssFileRef.rel = "stylesheet";
                     cssFileRef.type = "text/css";
                     cssFileRef.href = "https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css";
                     document.getElementsByTagName("head")[0].appendChild(cssFileRef)
                     
-                    axios.get('https://cdm15717.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p17085coll1/0/title!demo!rights/demo/100/1/0/0/0/0/json')
+                    axios.get('https://cdm17085.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p17085coll1/0/title!demo!rights/demo/100/1/0/0/0/0/json')
                     .then(function(response) {
                         let collectionManifest = createCollectionManifest();
                         response.data.records.forEach(function(record) {
