@@ -1,4 +1,4 @@
-       /*
+          /*
         * Helper functions
         */
     let createCollectionManifest = function() {
