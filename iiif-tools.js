@@ -44,7 +44,7 @@
             'start_date' : {
 			'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear(),
 			'month' :  new Date(getMetadata(itemManifest.metadata, 'Date')).getMonth() + 1,
-			'day' : new Date(getMetadata(itemManifest.metadata, 'Date')).getDate() +1
+			'day' : new Date(getMetadata(itemManifest.metadata, 'Date')).getDate()
 			}, 
 
             'text' : {
