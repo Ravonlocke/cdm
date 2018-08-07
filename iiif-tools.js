@@ -1,4 +1,4 @@
-          /*
+       /*
         * Helper functions
         */
     let createCollectionManifest = function() {
@@ -37,15 +37,16 @@
     let convertToEvent = function(itemManifest) {
         return {
             'media' : {
-                'url' : updateIIIFImageUrl(itemManifest.sequences[0].canvases[0].images[0].resource['@id'], 'size', '725,'),
-                'credit' : itemManifest.attribution['@value'],
-                'link' : 'https://17085.contentdm.oclc.org/digital/collection/p17085coll1/' + getUrlPart(itemManifest['@id'], 2) + '/id/' + getUrlPart(itemManifest['@id'], 3)
+                'url' : updateIIIFImageUrl(itemManifest.sequences[0].canvases[0].images[0].resource['@id'], 'size', 'full'),
+				'credit' : itemManifest.attribution['@value'],
+                'link' : 'https://cdm17085.contentdm.oclc.org/digital/collection/' + getUrlPart(itemManifest['@id'], 3) + '/id/' + getUrlPart(itemManifest['@id'], 4)
             },
-                 'start_date' : {
-                    'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear() +1,
-                    'month' :  new Date(getMetadata(itemManifest.metadata, 'Date')).getMonth() + 1,
-                    'day' : new Date(getMetadata(itemManifest.metadata, 'Date')).getDate() +1
-                    },
+            'start_date' : {
+			'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear(),
+			'month' :  new Date(getMetadata(itemManifest.metadata, 'Date')).getMonth() + 1,
+			'day' : new Date(getMetadata(itemManifest.metadata, 'Date')).getDate()
+			}, 
+
             'text' : {
                 'headline' : getMetadata(itemManifest.metadata, 'Title'),
                 'text' : getMetadata(itemManifest.metadata, "Description")
@@ -53,7 +54,7 @@
         }
     };
 
-    let updateIIIFImageUrl = function(iiifUrl, part, newValue) {
+  let updateIIIFImageUrl = function(iiifUrl, part, newValue) {
         let url = new URL(iiifUrl);
         let urlParts = url.pathname.split('/');
         if (part === 'region') {
