@@ -41,9 +41,11 @@
                 'credit' : itemManifest.attribution['@value'],
                 'link' : 'https://17085.contentdm.oclc.org/digital/collection/p17085coll1/' + getUrlPart(itemManifest['@id'], 2) + '/id/' + getUrlPart(itemManifest['@id'], 3)
             },
-            'start_date' : {
-                'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear()
-            },
+                 'start_date' : {
+                    'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear(),
+                    'month' :  new Date(getMetadata(itemManifest.metadata, 'Date')).getMonth() + 1,
+                    'day' : new Date(getMetadata(itemManifest.metadata, 'Date')).getDate()
+                    },
             'text' : {
                 'headline' : getMetadata(itemManifest.metadata, 'Title'),
                 'text' : getMetadata(itemManifest.metadata, "Description")
