@@ -38,7 +38,6 @@
         return {
             'media' : {
                 'url' : updateIIIFImageUrl(itemManifest.sequences[0].canvases[0].images[0].resource['@id'], 'size', '725,'),
-                'credit' : itemManifest.attribution['@value'],
                 'link' : 'https://17085.contentdm.oclc.org/digital/collection/p17085coll1/' + getUrlPart(itemManifest['@id'], 2) + '/id/' + getUrlPart(itemManifest['@id'], 3)
             },
             'start_date' : {
