@@ -68,7 +68,7 @@
     }
 
     let getUrlPart = function(inurl, pathIndex) {
-        let url = new URL(iiifUrl);
+        let url = new URL(inurl);
         let urlParts = url.pathname.split('/');
         return urlParts[pathIndex];
     }
