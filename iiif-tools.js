@@ -41,11 +41,12 @@
 				'credit' : itemManifest.attribution['@value'],
                 'link' : 'https://cdm17085.contentdm.oclc.org/digital/collection/' + getUrlPart(itemManifest['@id'], 3) + '/id/' + getUrlPart(itemManifest['@id'], 4)
             },
-            'start_date' : {
-			'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear(),
-			'month' :  new Date(getMetadata(itemManifest.metadata, 'Date')).getMonth() + 1,
-			'day' : new Date(getMetadata(itemManifest.metadata, 'Date')).getDate()
-			}, 
+	       'start_date' : {
+	       'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getUTCFullYear(),
+	       'month' :  new Date(getMetadata(itemManifest.metadata, 'Date')).getUTCMonth() + 1,
+	       'day' : new Date(getMetadata(itemManifest.metadata, 'Date')).getUTCDate()
+	       }, 
+
 
             'text' : {
                 'headline' : getMetadata(itemManifest.metadata, 'Title'),
