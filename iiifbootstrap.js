@@ -25,7 +25,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
        ScriptLoader('https://cdn.jsdelivr.net/npm/url-polyfill@1.0.13/url-polyfill.min.js', function() {
           ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
             ScriptLoader('https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js', function(){
-                ScriptLoader('http://cdm17085.contentdm.oclc.org/ui/custom/default/collection/default/resources/custompages/cdmugtest/iiif-tools.js', function(){
+                ScriptLoader('https://cdm17085.contentdm.oclc.org/ui/custom/default/collection/default/resources/custompages/cdmugtest/iiif-tools.js', function(){
                     let cssFileRef = document.createElement("link");
                     cssFileRef.rel = "stylesheet";
                     cssFileRef.type = "text/css";
