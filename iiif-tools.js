@@ -7,8 +7,8 @@
             '@id' : 'https://cdm17085.contentdm.oclc.org/change/this/to/the/path/this/gets/saved.json',
             '@type' : 'sc:Collection',
             'label' : 'Timeline Demo',
-            'description' : 'Collection from Timeline Demo',
-            'attribution' : 'This collection of images may be printed or downloaded by individuals, schools or libraries for study, research or classroom teaching without permission. For other uses contact  visualcollections@indianahistory.org. Use must be accompanied with the attribution, "Indiana Historical Society".',
+            'description' : 'Collection for Timeline Test',
+            'attribution' : 'This collection of images is held in copyright by Columbus State Community College.',
             'members' : []
         };
     }
